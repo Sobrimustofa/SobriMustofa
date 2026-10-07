@@ -183,3 +183,11 @@ body.lightbox-open{overflow:hidden}
 .mobile-menu a[aria-current="page"]{color:var(--navy);background:var(--lime);font-weight:700;box-shadow:inset 4px 0 0 var(--orange)}
 @media(max-width:800px){.desktop-nav a[aria-current="page"]::after{display:none}}
 @media(prefers-reduced-motion:reduce){.desktop-nav a{transition:none}}
+
+
+/* HAND-DRAWN EDITORIAL ANNOTATION */
+.person-annotation{position:relative;display:inline-block;isolation:isolate}
+.person-annotation::before,.person-annotation::after{content:"";position:absolute;pointer-events:none;z-index:-1;border:2px solid var(--lime);border-radius:47% 53% 51% 49% / 52% 46% 54% 48%;}
+.person-annotation::before{inset:-13px -22px -11px -20px;transform:rotate(-2.5deg)}
+.person-annotation::after{inset:-10px -19px -14px -23px;transform:rotate(2.2deg);opacity:.55;border-width:1.5px}
+@media(max-width:800px){.person-annotation::before{inset:-10px -16px -9px -15px}.person-annotation::after{inset:-8px -14px -11px -17px}}
