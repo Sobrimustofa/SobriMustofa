@@ -158,3 +158,57 @@ img{max-width:100%}
 @media(max-width:800px){
   .photo-location img,.photo-event-wide img,.photo-event-tall img,.photo-closing img{aspect-ratio:16/10}
 }
+
+/* PHOTOGRAPHY GALLERY — QUALITY-FIRST EDIT */
+.photo-gallery{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:clamp(16px,1.8vw,28px);
+  align-items:start;
+  padding:0 clamp(20px,4vw,64px) clamp(90px,10vw,160px);
+  max-width:1520px;
+  margin:0 auto;
+}
+.photo-card{margin:0;min-width:0}
+.photo-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  background:#ddd;
+  filter:saturate(.9) contrast(1.02);
+  transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s ease;
+}
+.photo-card:hover img{transform:scale(1.012);filter:saturate(1) contrast(1.04)}
+.photo-card figcaption{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:11px 0 2px;
+  border-top:1px solid rgba(17,30,38,.18);
+  margin-top:10px;
+  font-size:11px;
+  line-height:1.2;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.photo-card figcaption b{font-family:"DM Mono",monospace;font-weight:500}
+.photo-card figcaption span{opacity:.62;text-align:right}
+.photo-card--hero{grid-column:span 7}
+.photo-card--hero img{aspect-ratio:1/1;object-position:center}
+.photo-card--portrait{grid-column:span 5}
+.photo-card--portrait img{aspect-ratio:4/5;object-position:center top}
+.photo-card--wide{grid-column:span 7}
+.photo-card--wide img{aspect-ratio:16/10}
+.photo-card--tall{grid-column:span 5}
+.photo-card--tall img{aspect-ratio:4/5}
+.photo-card--feature{grid-column:span 6}
+.photo-card--feature img{aspect-ratio:5/6}
+.photo-close{padding-top:10vw;padding-bottom:10vw}
+@media(max-width:800px){
+  .photo-gallery{grid-template-columns:1fr;gap:26px;padding-left:20px;padding-right:20px}
+  .photo-card,.photo-card--hero,.photo-card--portrait,.photo-card--wide,.photo-card--tall,.photo-card--feature{grid-column:1}
+  .photo-card--hero img,.photo-card--portrait img,.photo-card--tall img,.photo-card--feature img{aspect-ratio:4/5}
+  .photo-card--wide img{aspect-ratio:16/10}
+  .photo-card figcaption{padding-top:9px}
+}
