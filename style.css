@@ -16,3 +16,6 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-of
 img{max-width:100%}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.image-card img{transition:none}}
 @media(max-width:800px){.credits-strip{display:block}.credits-strip .read-more{margin-top:22px}.hero-role{line-height:1.5}}
+
+.case-block p{max-width:760px;line-height:1.65}
+.case-note p{line-height:1.55}
