@@ -270,5 +270,16 @@
   });
 })();
 </script><script>document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>
-</body>
+<script>
+(function(){
+  const links=document.querySelectorAll('.desktop-nav a,.mobile-menu a');
+  const path=window.location.pathname.replace(/\\/+$/,'/') || '/';
+  const isCase=path.includes('/case-studies/');
+  links.forEach(link=>{
+    const href=new URL(link.getAttribute('href'),window.location.href).pathname.replace(/\\/+$/,'/') || '/';
+    const active=isCase ? href.includes('/case-studies/') : href===path;
+    if(active){link.setAttribute('aria-current','page');link.classList.add('is-current');}
+  });
+})();
+</script></body>
 </html>
