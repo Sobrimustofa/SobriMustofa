@@ -252,5 +252,4 @@ body.lightbox-open{overflow:hidden}
 .logo:hover span{color:var(--lime)}
 
 .hero-visual{position:relative}
-.hero-brand-mark{position:absolute;right:22px;bottom:22px;width:88px;height:auto;padding:8px;background:rgba(17,30,38,.88);border:1px solid rgba(242,236,223,.35);object-fit:contain}
-@media(max-width:800px){.hero-brand-mark{right:14px;bottom:14px;width:68px;padding:6px}}
+.hero-brand-mark{position:absolute;right:28px;bottom:58px;width:112px;height:112px;padding:0;background:transparent;border:0;object-fit:contain;z-index:3;filter:none}.hero-visual em{position:relative;z-index:4}@media(max-width:800px){.hero-brand-mark{right:18px;bottom:52px;width:82px;height:82px}}
