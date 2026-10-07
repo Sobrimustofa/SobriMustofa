@@ -135,3 +135,26 @@ img{max-width:100%}
   .photo-event-tall img{aspect-ratio:4/5}
   .photo-item figcaption{padding-bottom:26px}
 }
+
+/* Photography crop safety: preserve focal content while keeping the editorial grid */
+.photo-grid .photo-feature:first-child img{height:auto}
+.photo-portrait{grid-column:span 5}
+.photo-location{grid-column:span 7}
+.photo-portrait-secondary{grid-column:span 5}
+.photo-event-wide{grid-column:span 7}
+.photo-event-tall{grid-column:span 5}
+.photo-closing{grid-column:span 5}
+.photo-location img,.photo-event-wide img,.photo-event-tall img,.photo-closing img{
+  aspect-ratio:16/9;
+  height:auto;
+  object-fit:cover;
+}
+.photo-portrait img,.photo-portrait-secondary img{
+  aspect-ratio:4/5;
+  height:auto;
+  object-fit:cover;
+}
+.photo-portrait img,.photo-portrait-secondary img{object-position:center top}
+@media(max-width:800px){
+  .photo-location img,.photo-event-wide img,.photo-event-tall img,.photo-closing img{aspect-ratio:16/10}
+}
