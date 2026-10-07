@@ -33,4 +33,15 @@
 </main><footer><span>SOBRI MUSTOFA</span><span>STRUCTURED / STRATEGIC / HANDS-ON</span><span>© 2026</span></footer>
 <script>addEventListener('scroll',()=>document.documentElement.style.setProperty('--scroll',(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'),{passive:true});document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Sobri Mustofa","url":"https://sobrimustofa.github.io/SobriMustofa/"},{"@type":"Person","name":"Sobri Mustofa","url":"https://sobrimustofa.github.io/SobriMustofa/","jobTitle":"Creative Producer & Program Director","description":"Creative production and content professional working across video, directing, live events, commercial production and digital creative.","address":{"@type":"PostalAddress","addressLocality":"Bandung","addressCountry":"ID"},"sameAs":["https://behance.net/sobrimst"],"image":"https://sobrimustofa.github.io/SobriMustofa/assets/profile/sobri-profile.webp"}]}</script>
-</body></html>
+<script>
+(function(){
+  const links=document.querySelectorAll('.desktop-nav a,.mobile-menu a');
+  const path=window.location.pathname.replace(/\\/+$/,'/') || '/';
+  const isCase=path.includes('/case-studies/');
+  links.forEach(link=>{
+    const href=new URL(link.getAttribute('href'),window.location.href).pathname.replace(/\\/+$/,'/') || '/';
+    const active=isCase ? href.includes('/case-studies/') : href===path;
+    if(active){link.setAttribute('aria-current','page');link.classList.add('is-current');}
+  });
+})();
+</script></body></html>
