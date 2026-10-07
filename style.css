@@ -22,3 +22,9 @@ img{max-width:100%}
 
 /* Accessibility refinement */
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+
+.archive-note{margin-top:28px;padding:22px 0;border-top:1px solid rgba(17,30,38,.22);display:grid;grid-template-columns:.8fr 1.4fr 1.2fr;gap:20px;align-items:start}
+.archive-note strong{font:500 .66rem var(--mono);letter-spacing:.08em}
+.archive-note span{font-weight:700;line-height:1.45}
+.archive-note em{font-style:normal;opacity:.72;line-height:1.55;font-size:.9rem}
+@media(max-width:800px){.archive-note{grid-template-columns:1fr;gap:10px}}
