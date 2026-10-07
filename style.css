@@ -198,9 +198,9 @@ img{max-width:100%}
 .photo-card--hero img{aspect-ratio:1/1;object-position:center}
 .photo-card--portrait{grid-column:span 5}
 .photo-card--portrait img{aspect-ratio:4/5;object-position:center top}
-.photo-card--wide{grid-column:span 7}
+.photo-card--wide{grid-column:span 6}
 .photo-card--wide img{aspect-ratio:16/10}
-.photo-card--tall{grid-column:span 5}
+.photo-card--tall{grid-column:span 6}
 .photo-card--tall img{aspect-ratio:4/5}
 .photo-card--feature{grid-column:span 6}
 .photo-card--feature img{aspect-ratio:5/6}
