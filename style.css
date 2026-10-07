@@ -255,3 +255,8 @@ body.lightbox-open{overflow:hidden}
 .hero-brand-mark{position:absolute;right:28px;bottom:58px;width:112px;height:112px;padding:0;background:transparent;border:0;object-fit:contain;z-index:3;filter:none}.hero-visual em{position:relative;z-index:4}@media(max-width:800px){.hero-brand-mark{right:18px;bottom:52px;width:82px;height:82px}}
 
 /* AUDIT: keep the mobile CTA inside the menu to avoid header crowding. */
+
+/* Contact detail stack: email + Behance stay visually grouped on desktop and mobile. */
+.contact-details>div:first-child>a{display:block;font-size:clamp(1.5rem,3vw,3rem);color:var(--lime);text-decoration:none}
+.contact-details>div:first-child .socials{margin-top:14px}
+@media(max-width:800px){.contact-details>div:first-child>a{margin-bottom:0}.contact-details>div:first-child .socials{margin-top:12px}}
