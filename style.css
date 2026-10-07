@@ -244,3 +244,9 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:800px){
   .desktop-nav a[aria-current="page"]::before{display:none}
 }
+
+/* SOBRI PERSONAL LOGO */
+.logo{display:inline-flex;align-items:center;gap:8px;height:44px;color:var(--paper);text-decoration:none}
+.logo img{width:42px;height:32px;object-fit:contain;display:block}
+.logo span{font:700 15px var(--sans);letter-spacing:-.03em}
+.logo:hover span{color:var(--lime)}
