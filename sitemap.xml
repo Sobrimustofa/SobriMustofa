@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sobrimustofa.github.io/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/asian-games-2018.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/asian-para-games-2018.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/g20-indonesia-2022.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/kpu-2023.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/jaya-mediacell.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/albaasel-indonesia.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/imworks.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sobrimustofa.github.io/case-studies/jabar-lautan-kopi-2019.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-<url><loc>https://sobrimustofa.github.io/work.html</loc><changefreq>monthly</changefreq></url><url><loc>https://sobrimustofa.github.io/about.html</loc><changefreq>monthly</changefreq></url><url><loc>https://sobrimustofa.github.io/person.html</loc><changefreq>monthly</changefreq></url><url><loc>https://sobrimustofa.github.io/contact.html</loc><changefreq>monthly</changefreq></url><url><loc>https://sobrimustofa.github.io/case-studies/</loc><changefreq>monthly</changefreq></url></urlset>
+<url><loc>https://sobrimustofa.github.io/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+<url><loc>https://sobrimustofa.github.io/work.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+<url><loc>https://sobrimustofa.github.io/about.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+<url><loc>https://sobrimustofa.github.io/journey.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+<url><loc>https://sobrimustofa.github.io/person.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+<url><loc>https://sobrimustofa.github.io/contact.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/kpu-2023.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.95</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/asian-games-2018.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/asian-para-games-2018.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/jabar-lautan-kopi-2019.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/jaya-mediacell.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/albaasel-indonesia.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/imworks.html</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://sobrimustofa.github.io/case-studies/g20-indonesia-2022.html</loc><lastmod>2026-10-07</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+</urlset>
