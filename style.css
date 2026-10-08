@@ -286,3 +286,16 @@ body.lightbox-open{overflow:hidden}
   .photo-gallery{padding-bottom:18vw;}
   .photo-card figcaption{min-height:28px;align-items:flex-start;}
 }
+
+
+/* CASE STUDY VIDEO — LINTASARTA */
+.case-video{width:min(100%,1120px);margin:clamp(56px,8vw,112px) auto 0;padding:0 clamp(18px,4vw,48px);}
+.case-video-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font:500 11px/1.2 "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;}
+.case-video-frame{margin:0;}
+.case-video-frame video{display:block;width:100%;height:auto;aspect-ratio:3 / 2;object-fit:cover;background:#0b171d;border-radius:2px;}
+.case-video-frame figcaption{margin-top:10px;font-size:12px;line-height:1.5;opacity:.62;}
+@media(max-width:640px){
+  .case-video{padding:0 18px;margin-top:48px;}
+  .case-video-head{font-size:10px;}
+  .case-video-frame video{border-radius:0;}
+}
