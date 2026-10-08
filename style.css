@@ -320,3 +320,9 @@ body.lightbox-open{overflow:hidden}
 .moving-feature-grid .moving-feature{display:grid;grid-template-columns:1fr;gap:0;padding-top:14px;}
 .moving-feature-grid .moving-meta{padding-top:22px;}
 @media(max-width:800px){.moving-feature-grid{grid-template-columns:1fr;gap:48px}.moving-feature-grid .moving-feature{padding-top:14px}.moving-feature-grid .moving-meta{padding-top:22px;}}
+
+
+/* LINK INTERACTION HARDENING */
+a[href]{pointer-events:auto;cursor:pointer;}
+a[href^="https://"],a[href^="mailto:"],a[href^="tel:"]{position:relative;z-index:2;}
+.contact-options a,.contact-details a,.socials a,.talk,.hero-cta,.read-more,.case-footer a,.mobile-menu a{touch-action:manipulation;}
