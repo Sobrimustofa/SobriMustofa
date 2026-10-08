@@ -314,3 +314,9 @@ body.lightbox-open{overflow:hidden}
 .moving-meta p{color:#666;line-height:1.5;max-width:300px;}
 .moving-image .heading{margin-bottom:48px;}
 @media(max-width:800px){.moving-feature{grid-template-columns:1fr;gap:0;padding-top:14px;}.moving-meta{padding:22px 0 28px;}.moving-video{aspect-ratio:16/9;}.moving-image-work{padding-top:15vw;}}
+
+/* MOVING IMAGE — CURATED VIDEO GRID */
+.moving-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px);}
+.moving-feature-grid .moving-feature{display:grid;grid-template-columns:1fr;gap:0;padding-top:14px;}
+.moving-feature-grid .moving-meta{padding-top:22px;}
+@media(max-width:800px){.moving-feature-grid{grid-template-columns:1fr;gap:48px}.moving-feature-grid .moving-feature{padding-top:14px}.moving-feature-grid .moving-meta{padding-top:22px;}}
