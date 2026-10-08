@@ -25,8 +25,8 @@
 </nav>
 <details class="mobile-menu"><summary>MENU</summary><div>
 <a href="work.html">Work</a><a href="photography.html">Photography</a><a href="case-studies/">Case Studies</a><a href="about.html">About</a><a href="how-i-work.html">How I Work</a><a href="contact.html">Contact</a>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Immst98s%40gmail.com">LET'S TALK ↗</a></div></details>
-<a class="talk" href="https://mail.google.com/mail/?view=cm&fs=1&to=Immst98s%40gmail.com">LET'S TALK ↗</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Immst98s%40gmail.com">LET'S TALK </a></div></details>
+<a class="talk" href="https://mail.google.com/mail/?view=cm&fs=1&to=Immst98s%40gmail.com">LET'S TALK </a>
 </header>
 
 <main id="main">
@@ -169,152 +169,152 @@
 <small>THE ARCHIVE</small>
 <h2>Frames beyond<br><i>the work.</i></h2>
 <p>A curated visual archive outside the major project documentation — focused on portraits, documentary frames, commercial imagery and editorial studies.</p>
-<a class="read-more light-link" href="contact.html">DISCUSS A PHOTO / PRODUCTION BRIEF ↗</a>
+<a class="read-more light-link" href="contact.html">DISCUSS A PHOTO / PRODUCTION BRIEF </a>
 </section>
 
 <div class="photo-lightbox" id="photoLightbox" aria-hidden="true">
-  <div class="photo-lightbox__backdrop" data-lightbox-close></div>
-  <div class="photo-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
-    <button class="photo-lightbox__close" type="button" aria-label="Close photograph viewer" data-lightbox-close>×</button>
-    <button class="photo-lightbox__prev" type="button" aria-label="Previous photograph">←</button>
-    <figure class="photo-lightbox__figure">
-      <img id="lightboxImage" src="" alt="">
-      <figcaption><span id="lightboxIndex"></span><strong id="lightboxTitle"></strong></figcaption>
-    </figure>
-    <button class="photo-lightbox__next" type="button" aria-label="Next photograph">→</button>
-  </div>
+ <div class="photo-lightbox__backdrop" data-lightbox-close></div>
+ <div class="photo-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+ <button class="photo-lightbox__close" type="button" aria-label="Close photograph viewer" data-lightbox-close>×</button>
+ <button class="photo-lightbox__prev" type="button" aria-label="Previous photograph"> </button>
+ <figure class="photo-lightbox__figure">
+ <img id="lightboxImage" src="" alt="">
+ <figcaption><span id="lightboxIndex"></span><strong id="lightboxTitle"></strong></figcaption>
+ </figure>
+ <button class="photo-lightbox__next" type="button" aria-label="Next photograph"> </button>
+ </div>
 </div>
 </main>
 
 <footer><span>SOBRI MUSTOFA</span><span>STRUCTURED / STRATEGIC / HANDS-ON</span><span>© 2026</span></footer>
 <script>
 (function(){
-  const grid=document.querySelector('.photo-gallery');
-  if(!grid) return;
-  const items=[...grid.querySelectorAll('.photo-card')];
-  let timer;
-  function layout(){
-    if(window.innerWidth<=800){
-      items.forEach(item=>item.style.gridRowEnd='auto');
-      return;
-    }
-    items.forEach(item=>item.style.gridRowEnd='auto');
-    requestAnimationFrame(()=>{
-      const styles=getComputedStyle(grid);
-      const rowHeight=parseFloat(styles.gridAutoRows);
-      const rowGap=parseFloat(styles.rowGap);
-      items.forEach(item=>{
-        const height=item.getBoundingClientRect().height;
-        const span=Math.max(1,Math.ceil((height+rowGap)/(rowHeight+rowGap)));
-        item.style.gridRowEnd='span '+span;
-      });
-    });
-  }
-  function schedule(){
-    clearTimeout(timer);
-    timer=setTimeout(layout,80);
-  }
-  window.addEventListener('load',layout);
-  window.addEventListener('resize',schedule);
-  items.forEach(item=>{
-    const img=item.querySelector('img');
-    if(img) img.addEventListener('load',schedule,{passive:true});
-  });
-  layout();
+ const grid=document.querySelector('.photo-gallery');
+ if(!grid) return;
+ const items=[...grid.querySelectorAll('.photo-card')];
+ let timer;
+ function layout(){
+ if(window.innerWidth<=800){
+ items.forEach(item=>item.style.gridRowEnd='auto');
+ return;
+ }
+ items.forEach(item=>item.style.gridRowEnd='auto');
+ requestAnimationFrame(()=>{
+ const styles=getComputedStyle(grid);
+ const rowHeight=parseFloat(styles.gridAutoRows);
+ const rowGap=parseFloat(styles.rowGap);
+ items.forEach(item=>{
+ const height=item.getBoundingClientRect().height;
+ const span=Math.max(1,Math.ceil((height+rowGap)/(rowHeight+rowGap)));
+ item.style.gridRowEnd='span '+span;
+ });
+ });
+ }
+ function schedule(){
+ clearTimeout(timer);
+ timer=setTimeout(layout,80);
+ }
+ window.addEventListener('load',layout);
+ window.addEventListener('resize',schedule);
+ items.forEach(item=>{
+ const img=item.querySelector('img');
+ if(img) img.addEventListener('load',schedule,{passive:true});
+ });
+ layout();
 })();
 </script><script>
 (function(){
-  const cards=[...document.querySelectorAll('.photo-card')];
-  const box=document.getElementById('photoLightbox');
-  const image=document.getElementById('lightboxImage');
-  const index=document.getElementById('lightboxIndex');
-  const title=document.getElementById('lightboxTitle');
-  const closeBtn=box.querySelector('.photo-lightbox__close');
-  const prev=box.querySelector('.photo-lightbox__prev');
-  const next=box.querySelector('.photo-lightbox__next');
-  let current=0;
-  let lastFocus=null;
-  function open(i){
-    current=(i+cards.length)%cards.length;
-    const img=cards[current].querySelector('img');
-    const label=cards[current].querySelector('figcaption span')?.textContent.trim()||'';
-    image.src=img.currentSrc||img.src;
-    image.alt=img.alt;
-    index.textContent=String(current+1).padStart(2,'0')+' / '+String(cards.length).padStart(2,'0');
-    title.textContent=label;
-    box.classList.add('is-open');
-    box.setAttribute('aria-hidden','false');
-    lastFocus=cards[current];
-    document.body.classList.add('lightbox-open');
-    closeBtn.focus();
-  }
-  function close(){
-    box.classList.remove('is-open');
-    box.setAttribute('aria-hidden','true');
-    document.body.classList.remove('lightbox-open');
-    if(lastFocus) lastFocus.focus();
-  }
-  cards.forEach((card,i)=>{
-    card.addEventListener('click',()=>open(i));
-    card.addEventListener('keydown',e=>{
-      if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i);}
-    });
-  });
-  box.querySelectorAll('[data-lightbox-close]').forEach(el=>el.addEventListener('click',close));
-  prev.addEventListener('click',()=>open(current-1));
-  next.addEventListener('click',()=>open(current+1));
-  document.addEventListener('keydown',e=>{
-    if(!box.classList.contains('is-open')) return;
-    if(e.key==='Escape') close();
-    if(e.key==='ArrowLeft') open(current-1);
-    if(e.key==='ArrowRight') open(current+1);
-    if(e.key==='Tab'){
-      const focusables=[...box.querySelectorAll('button')].filter(el=>!el.disabled);
-      const first=focusables[0], last=focusables[focusables.length-1];
-      if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
-      else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
-    }
-  });
+ const cards=[...document.querySelectorAll('.photo-card')];
+ const box=document.getElementById('photoLightbox');
+ const image=document.getElementById('lightboxImage');
+ const index=document.getElementById('lightboxIndex');
+ const title=document.getElementById('lightboxTitle');
+ const closeBtn=box.querySelector('.photo-lightbox__close');
+ const prev=box.querySelector('.photo-lightbox__prev');
+ const next=box.querySelector('.photo-lightbox__next');
+ let current=0;
+ let lastFocus=null;
+ function open(i){
+ current=(i+cards.length)%cards.length;
+ const img=cards[current].querySelector('img');
+ const label=cards[current].querySelector('figcaption span')?.textContent.trim()||'';
+ image.src=img.currentSrc||img.src;
+ image.alt=img.alt;
+ index.textContent=String(current+1).padStart(2,'0')+' / '+String(cards.length).padStart(2,'0');
+ title.textContent=label;
+ box.classList.add('is-open');
+ box.setAttribute('aria-hidden','false');
+ lastFocus=cards[current];
+ document.body.classList.add('lightbox-open');
+ closeBtn.focus();
+ }
+ function close(){
+ box.classList.remove('is-open');
+ box.setAttribute('aria-hidden','true');
+ document.body.classList.remove('lightbox-open');
+ if(lastFocus) lastFocus.focus();
+ }
+ cards.forEach((card,i)=>{
+ card.addEventListener('click',()=>open(i));
+ card.addEventListener('keydown',e=>{
+ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i);}
+ });
+ });
+ box.querySelectorAll('[data-lightbox-close]').forEach(el=>el.addEventListener('click',close));
+ prev.addEventListener('click',()=>open(current-1));
+ next.addEventListener('click',()=>open(current+1));
+ document.addEventListener('keydown',e=>{
+ if(!box.classList.contains('is-open')) return;
+ if(e.key==='Escape') close();
+ if(e.key==='ArrowLeft') open(current-1);
+ if(e.key==='ArrowRight') open(current+1);
+ if(e.key==='Tab'){
+ const focusables=[...box.querySelectorAll('button')].filter(el=>!el.disabled);
+ const first=focusables[0], last=focusables[focusables.length-1];
+ if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+ else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+ }
+ });
 })();
 </script><script>document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>
 <script>
 (function(){
-  const links=document.querySelectorAll('.desktop-nav a,.mobile-menu a');
-  const path=window.location.pathname.replace(/\\/+$/,'/') || '/';
-  const isCase=path.includes('/case-studies/');
-  links.forEach(link=>{
-    const href=new URL(link.getAttribute('href'),window.location.href).pathname.replace(/\\/+$/,'/') || '/';
-    const active=isCase ? href.includes('/case-studies/') : href===path;
-    if(active){link.setAttribute('aria-current','page');link.classList.add('is-current');}
-  });
+ const links=document.querySelectorAll('.desktop-nav a,.mobile-menu a');
+ const path=window.location.pathname.replace(/\\/+$/,'/') || '/';
+ const isCase=path.includes('/case-studies/');
+ links.forEach(link=>{
+ const href=new URL(link.getAttribute('href'),window.location.href).pathname.replace(/\\/+$/,'/') || '/';
+ const active=isCase ? href.includes('/case-studies/') : href===path;
+ if(active){link.setAttribute('aria-current','page');link.classList.add('is-current');}
+ });
 })();
 </script><script>
 (function(){
-  const gallery=document.querySelector('.photo-gallery');
-  if(!gallery)return;
-  const cards=[...gallery.querySelectorAll('.photo-card')];
-  const sync=()=>{
-    const compact=window.innerWidth<=520;
-    if(compact){cards.forEach(card=>card.style.removeProperty('--photo-span'));return;}
-    const styles=getComputedStyle(gallery);
-    const row=parseFloat(styles.getPropertyValue('grid-auto-rows'))||8;
-    const gap=parseFloat(styles.getPropertyValue('row-gap'))||14;
-    cards.forEach(card=>{
-      const height=card.getBoundingClientRect().height;
-      const span=Math.max(1,Math.ceil((height+gap)/(row+gap)));
-      card.style.setProperty('--photo-span',span);
-    });
-  };
-  cards.forEach(card=>{
-    const img=card.querySelector('img');
-    if(img&&!img.complete)img.addEventListener('load',sync,{once:true});
-  });
-  if('ResizeObserver' in window){
-    const observer=new ResizeObserver(()=>requestAnimationFrame(sync));
-    cards.forEach(card=>observer.observe(card));
-  }
-  addEventListener('resize',sync,{passive:true});
-  sync();
+ const gallery=document.querySelector('.photo-gallery');
+ if(!gallery)return;
+ const cards=[...gallery.querySelectorAll('.photo-card')];
+ const sync=()=>{
+ const compact=window.innerWidth<=520;
+ if(compact){cards.forEach(card=>card.style.removeProperty('--photo-span'));return;}
+ const styles=getComputedStyle(gallery);
+ const row=parseFloat(styles.getPropertyValue('grid-auto-rows'))||8;
+ const gap=parseFloat(styles.getPropertyValue('row-gap'))||14;
+ cards.forEach(card=>{
+ const height=card.getBoundingClientRect().height;
+ const span=Math.max(1,Math.ceil((height+gap)/(row+gap)));
+ card.style.setProperty('--photo-span',span);
+ });
+ };
+ cards.forEach(card=>{
+ const img=card.querySelector('img');
+ if(img&&!img.complete)img.addEventListener('load',sync,{once:true});
+ });
+ if('ResizeObserver' in window){
+ const observer=new ResizeObserver(()=>requestAnimationFrame(sync));
+ cards.forEach(card=>observer.observe(card));
+ }
+ addEventListener('resize',sync,{passive:true});
+ sync();
 })();
 </script></body>
 </html>
