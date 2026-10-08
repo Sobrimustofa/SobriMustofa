@@ -276,3 +276,13 @@ body.lightbox-open{overflow:hidden}
   .page-intro h1{font-size:clamp(5rem,10vw,9rem)}
   .case-intro{gap:5vw}
 }
+
+
+/* FINAL UI HARDENING — photography masonry and responsive rhythm */
+.photo-gallery{grid-auto-rows:8px;align-items:start;}
+.photo-card{grid-row-end:span var(--photo-span,1);}
+@media(max-width:520px){.photo-card{grid-row-end:auto!important;}}
+@media(max-width:800px){
+  .photo-gallery{padding-bottom:18vw;}
+  .photo-card figcaption{min-height:28px;align-items:flex-start;}
+}
